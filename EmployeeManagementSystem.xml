@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="EmployeeManagementSystem.xsl"?>
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="EmployeeManagementSystemSchema.xsd">
+  <Employee ID="ID0">
+    <Name>Prashant</Name>
+    <Age>60</Age>
+    <Salary>140000</Salary>
+    <Email>pspprashant619@gmail.com</Email>
+    <MobNum>9793519666</MobNum>
+    <Designation>CEO</Designation>
+  </Employee>
+  <Employee ID="ID1">
+    <Name>James</Name>
+    <Age>46</Age>
+    <Salary>120000</Salary>
+    <Email>james@google.com</Email>
+    <MobNum>9784578972</MobNum>
+    <Designation>PersonalAssistant</Designation>
+  </Employee>
+  <Employee ID="ID3">
+    <Name>Rick</Name>
+    <Age>20</Age>
+    <Salary>100000</Salary>
+    <Email>Quick@google.com</Email>
+    <MobNum>9784578979</MobNum>
+    <Designation>Intern</Designation>
+  </Employee>
+  <Employee ID="ID4">
+    <Name>Roy</Name>
+    <Age>45</Age>
+    <Salary>70000</Salary>
+    <Email>Roy@yahoo.com</Email>
+    <MobNum>9784570079</MobNum>
+    <Designation>S.Dev</Designation>
+  </Employee>
+</Company>

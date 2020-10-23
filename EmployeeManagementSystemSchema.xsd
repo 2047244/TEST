@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psp:schema xmlns:psp="http://www.w3.org/2001/XMLSchema">
+<psp:element name="Company">
+<psp:complexType>
+<psp:sequence>
+<psp:element name="Employee" maxOccurs="50">
+<psp:complexType>
+<psp:sequence>
+<psp:element name="Name" type="psp:string"></psp:element>
+<psp:element name="Age" type="psp:integer"></psp:element>
+<psp:element name="Salary" type="salary"></psp:element>
+<psp:element name="Email" type="psp:string"></psp:element>
+<psp:element name="MobNum" type="mobilenumber"></psp:element>
+<psp:element name="Designation" type="psp:string"></psp:element>
+</psp:sequence>
+<psp:attribute name="ID" type="psp:ID" use="required">
+</psp:attribute>
+</psp:complexType>
+</psp:element>
+</psp:sequence>
+</psp:complexType>
+</psp:element>
+<psp:simpleType name="salary">
+<psp:restriction base="psp:integer">
+<psp:maxExclusive value="200000"></psp:maxExclusive>
+<psp:minExclusive value="50000"></psp:minExclusive>
+</psp:restriction>
+</psp:simpleType>
+<psp:simpleType name="mobilenumber">
+<psp:restriction base="psp:integer">
+<psp:maxExclusive value="9999999999"></psp:maxExclusive>
+<psp:minExclusive value="1000000000"></psp:minExclusive>
+</psp:restriction>
+</psp:simpleType>
+</psp:schema>
