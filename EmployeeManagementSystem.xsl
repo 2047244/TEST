@@ -17,7 +17,7 @@
             <body>
                 <h1 align="center">Employee Management System</h1>              
                     <table border="5" align="center">
-                        <tr bgcolor="#00ffbf">
+                        <tr bgcolor="#3EA99F">
                             <th style="text-align:left">ID</th>
                             <th style="text-align:left">NAME</th>
                             <th style="text-align:left">Age</th>
@@ -30,7 +30,7 @@
                         <xsl:for-each select="Company/Employee">
                             <tr>                       
                                 <td bgcolor="#C0C0C0">
-                                    <xsl:value-of select="../ID"/>
+                                    <xsl:value-of select="@ID"/>
                                 </td>
                                 <td bgcolor="#808080">
                                     <xsl:value-of select="Name"/>
