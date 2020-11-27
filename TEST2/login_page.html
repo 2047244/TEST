@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Create New Account</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/customized.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function validate() {
+            var Name = document.getElementById('uname').value;
+            if (Name == "") //validating name
+            {
+                alert("Name Field Is Left Blank,Please Enter Your Name!")
+                return false;
+            }
+            var Tel = document.getElementById('phone').value;
+            if (Tel < 1000000000 || Tel > 9999999999) //validating phonenumber
+            {
+                alert("Invalid Phone Number");
+                return false;
+            }
+            var Name = document.getElementById('uname').value;
+            document.cookie = "username=" + name + ";expires=Fri,1 Aug 2021 01:00:00 UTC;";
+            document.cookie = "phone=" + Tel + ";expires=Fri,1 Aug 2021 01:00:00 UTC;";
+        }
+    </script>
+</head>
+
+<body style="background-color: cadetblue;">
+    <div>
+        <h1 style="text-align: center;">Gateways 2020</h1>
+    </div>
+    <div>
+        <div>
+            <div>
+                <h1 style="text-align:center;color: rgb(57, 235, 125);"><b>New Account</b></h1>
+                <div style="color:rgb(43, 220, 226) ">
+                    <div>
+                        <div
+                            style="background-color: rgb(104, 40, 224); max-width: 60%; margin-left: auto; margin-right: auto;">
+                            <form action="success.html" method="post">
+                                <div class="container " style="padding: 5ex;">
+                                    <label for="Name"><b>Name:</b></label>
+                                    <input
+                                        onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'
+                                        type="text " id="Name" placeholder="Name " name="Name" style="width: 100%"
+                                        required>
+                                    <br>
+                                    <label for="email"><b>Email:</b></label>
+                                    <br>
+                                    <input type="email" id="email" placeholder="Enter Email " name="email"
+                                        style="width: 100%" required>
+                                    <label for="Branch"><b>Branch:</b></label>
+                                    <input type="text " id="Branch" placeholder="Branch " name="branch"
+                                        style="width: 100%">
+                                    <br>
+                                    <label for="university"><b>University:</b></label>
+                                    <input type="text " id="University" placeholder="University " name="Univeristy"
+                                        style="width: 100%">
+                                    <br>
+                                    <label for="State"><b>State:</b></label>
+                                    <input type="text " id="State" placeholder="Enter name of the State " name="state"
+                                        style="width: 100%">
+                                    <br>
+                                    <label for="Address"><b>Address:</b></label>
+                                    <input type="text " id="address" placeholder="Enter Address " name="address"
+                                        style="width: 100%">
+                                    <br>
+                                    <label for="age"><b>Age:</b></label>
+                                    <input onkeypress='return ((event.charCode >= 48 && event.charCode <= 57))'
+                                        type="text " id="age" placeholder="Enter Age " name="age" style="width: 100%">
+                                    <br>
+                                    <label for="phone"><b>Phone Number:</b></label><br>
+                                    <input onkeypress='return ((event.charCode >= 48 && event.charCode <= 57))'
+                                        type="tel" id="phone" placeholder="0123456789 " name="phone"
+                                        style="width: 100%">
+                                    <br>
+                                    <label for="uname"><b>UserName:</b></label>
+                                    <input type="text " id="uname" placeholder="Enter Username " name="uname"
+                                        style="width: 100%">
+                                    <br>
+                                    <label for="upass"><b>Password:</b></label>
+                                    <input type="text " id="upass" placeholder="Enter password " name="upass"
+                                        style="width: 100%">
+                                    <br>
+                                    <button style="background-color: crimson;" type="submit " name="submit"
+                                        onclick="return validate();">Create
+                                        Account</button>
+                                    <br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<title>GATEWAYS-2020</title>
+<style>
+    div.a {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table,
+    th,
+    td {
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgb(14, 13, 13);
+        width: 40%;
+    }
+
+    th,
+    td {
+        padding: 1px;
+        width: 50%;
+    }
+
+    .button {
+        border-radius: 3px;
+        background-color: #4be22d;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 18px;
+        padding: 7px;
+        width: 170px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 1px;
+        text-align: center;
+    }
+</style>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEACHER_DETAILS</title>
+</head>
+
+<body>
+    <div class="a" style="margin-left: auto; margin-right: auto; text-align: center;">
+        <h1>GATEWAYS - 2020</h1>
+        <h3>“TECHOVID”</h3>
+    </div>
+    <div style="margin-right: auto; margin-left: auto;">
+        <button class="button" >
+            <p onclick="loadXML()">CLICK HERE</p>
+        </button>
+    </div>  
+    <br><br>
+    <table id="demo"></table>
+    <script>
+        function loadXML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET", "form.xml", false);
+            xhttp.send();
+        }
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var t = "<tr><th>NAME</th><th>COLLEGE/INSTITUTION NAME</th></tr>";
+            var x = xmlDoc.getElementsByTagName("CS");
+            for (i = 0; i < x.length; i++) {
+                t += "<tr><td>" +
+                    x[i].getElementsByTagName("STU_NAME")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("STU_COLLEGE")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+            document.getElementById("demo").innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>

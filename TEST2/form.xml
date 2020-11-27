@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO8859-1" ?>
+<CHRIST>
+    <CS>
+        <STU_NAME> James</STU_NAME>
+        <STU_BRANCH>DELHI</STU_BRANCH>
+        <STU_COLLEGE>Vidya Jyothi</STU_COLLEGE>
+        <STU_EMAIL>James@gmail.com</STU_EMAIL>
+    </CS>
+    <CS>
+        <STU_NAME> Rick</STU_NAME>
+        <STU_BRANCH>BANGALORE</STU_BRANCH>
+        <STU_COLLEGE>St.Joseph</STU_COLLEGE>
+        <STU_EMAIL>Rick@yahoo.com</STU_EMAIL>
+    </CS>
+    <CS>
+        <STU_NAME> Sam</STU_NAME>
+        <STU_BRANCH>CHENNAI</STU_BRANCH>
+        <STU_COLLEGE>Anna University</STU_COLLEGE>
+        <STU_EMAIL>Sam@gmail.com</STU_EMAIL>
+    </CS>
+</CHRIST>
